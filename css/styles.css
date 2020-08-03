@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Anton&display=swap');
+
+body {
+    background-color: black;
+    background-image: linear-gradient(0deg, #666, #000);
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #202020;
+    padding: 3rem;
+    box-shadow: 0 0 50px black;
+}
+
+h1 {
+    font-family: "Anton", sans-serif;
+    letter-spacing: 10px;
+    margin: 0;
+
+    color: #a11;
+    text-align: center;
+    font-size: 7rem;
+   
+    text-transform: uppercase;
+
+    text-shadow: 0 0 3px ghostwhite;
+}
+
+
+/* main Nav */
+nav.mainNav {
+    position: sticky;
+    top: 0;
+    width: 15rem;
+    background-color: #202020;
+    height: 100%;
+    margin: 0;
+    border-radius: 1rem;
+    padding: 1rem 0 ;
+}
+
+nav.mainNav a {
+    font-family: "Arial Black", sans-serif;
+    font-weight: bold;
+    display: block;
+    width: 13rem;
+    color: #ccc;
+    font-size: 1.8rem;
+    padding: 1rem;
+    text-decoration: none;
+    margin: 0;
+}
+
+nav.mainNav a:hover {
+    
+    padding-left: 2rem;
+    box-sizing: border-box;
+
+
+}
+
+nav.mainNav a.current {
+    text-decoration: underline;
+}
+
+/*sub Nav*/
+
+nav.subNav{
+    position: sticky;
+    width: 90%;
+    top: 0;
+    background-color: lightgrey;
+    z-index: 1;
+    margin: 0 2rem;
+    padding: 1rem;
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid 4px darkslategrey;
+    
+}
+
+nav.subNav a{
+    font-family: Tahoma, sans-serif;
+    text-decoration: none;
+    color: darkslategray;
+    
+    
+}
+
+nav.subNav a:hover{
+    
+    color: black;
+    
+    font-weight: bold;
+    
+    
+}
+
+section{
+    max-width: 80rem;
+    margin: auto;
+}
+
+
+img{
+    width: 15rem;
+}
+figure {
+    margin: 0;
+    padding: 0;
+    float: right;
+    font-size: 0.8rem;
+    
+}
+
+
+
+article {
+    width: 90%;
+    float: left;
+    position: relative;
+    background-color: beige;
+    margin: 0 2rem 2rem 2rem; 
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 20px #111;
+
+    font-size: 1.4rem;
+
+}
+article:first-of-type{
+    border-radius: 0 0 1rem 1rem;
+}
+
+article h2 {
+    font-family: "Acme", sans-serif;
+    clear: both;
+    
+    text-shadow: 0 0 2px indianred;
+}
+
+article p{
+    margin: 1rem;
+}
+
+main {
+    display: flex;
+}
+
+audio{
+    background-color: red;
+    border-radius: 0.6rem;
+}
+
+@media screen and (min-width: 1960px){
+    section{
+        padding-right: 15rem;
+    }
+}
