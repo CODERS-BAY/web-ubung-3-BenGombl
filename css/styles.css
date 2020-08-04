@@ -34,8 +34,9 @@ nav.mainNav {
     position: sticky;
     top: 0;
     width: 15rem;
-    background-color: #202020;
     height: 100%;
+    background-color: #202020;
+    
     margin: 0;
     border-radius: 1rem;
     padding: 1rem 0 ;
@@ -51,12 +52,14 @@ nav.mainNav a {
     padding: 1rem;
     text-decoration: none;
     margin: 0;
+    box-sizing: border-box;
+    text-shadow: 0 0 15px black;
 }
 
 nav.mainNav a:hover {
     
     padding-left: 2rem;
-    box-sizing: border-box;
+    
 
 
 }
@@ -77,7 +80,7 @@ nav.subNav{
     padding: 1rem;
     border-radius: 1rem 1rem 0 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     border-bottom: solid 4px darkslategrey;
     
 }
@@ -86,6 +89,8 @@ nav.subNav a{
     font-family: Tahoma, sans-serif;
     text-decoration: none;
     color: darkslategray;
+    margin: 0 1rem;
+    min-width: 5rem;
     
     
 }
@@ -102,25 +107,34 @@ nav.subNav a:hover{
 section{
     max-width: 80rem;
     margin: auto;
+    padding-right: 5vw;
 }
 
 
 img{
     width: 15rem;
 }
-figure {
+figure, video, iframe{
     margin: 0;
-    padding: 0;
+    padding: 0.5rem;
     float: right;
     font-size: 0.8rem;
+    width: 15rem;
     
 }
 
 
 
+iframe{
+    width: 35rem;
+}
+
+
+
 article {
+    
     width: 90%;
-    float: left;
+    
     position: relative;
     background-color: beige;
     margin: 0 2rem 2rem 2rem; 
@@ -129,21 +143,28 @@ article {
     box-shadow: 0 10px 20px #111;
 
     font-size: 1.4rem;
-
+    clear: both;
 }
 article:first-of-type{
     border-radius: 0 0 1rem 1rem;
+    
+    
 }
 
 article h2 {
     font-family: "Acme", sans-serif;
-    clear: both;
+    
     
     text-shadow: 0 0 2px indianred;
 }
 
 article p{
     margin: 1rem;
+    
+}
+
+div.floatclear{
+    clear: both;
 }
 
 main {
@@ -159,4 +180,105 @@ audio{
     section{
         padding-right: 15rem;
     }
+}
+
+@media screen and (max-width: 960px){
+    section{
+        padding: 0;
+        margin: 0;
+    }
+    article{
+        margin: auto;
+        margin-bottom: 0.5rem;
+        float: none;
+        
+        
+        
+    }
+
+    nav.subNav{
+        position: sticky;
+        width: 90%;
+        top: 0;
+        background-color: lightgrey;
+        z-index: 1;
+        margin: auto;
+        padding: 1rem;
+        border-radius: 1rem 1rem 0 0;
+        
+        
+        border-bottom: solid 4px darkslategrey;
+        
+    }
+
+    nav.subNav a{
+        margin: 0.3rem;
+    }
+    main{
+        display: block;
+    }
+    nav.mainNav{
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+    nav.mainNav a{
+        text-align: center;
+        display: block;
+        font-size: 1rem;
+        height: 1.8rem;
+        width: 10rem;
+        
+        
+    }
+
+    nav.mainNav a:hover{
+        padding-left: 1rem;
+        color: beige;
+    }
+    h1{
+        font-size: 5rem;
+        padding: 0;
+    }
+
+    header{
+        padding: 0.5rem 2rem;
+    }
+
+    iframe{
+        
+        float: none;
+        display: block;
+        
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 660px){
+    figure, video{
+        position: relative;
+        float: none;
+        
+        margin: auto;
+    }
+
+    
+
+    header{
+        padding: 0.5rem 1.5rem;
+    }
+
+    h1{
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 460px){
+    header{
+        padding: 0.5rem;
+    }
+
 }
